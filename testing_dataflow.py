@@ -6,7 +6,10 @@ def process_numbers(a, b):
     :param b: Số nguyên dương thứ hai.
     :return: Kết quả kiểm tra chia hết và tổng bội số chung.
     """
-    is_divisible = (a % b == 0) or (b % a == 0)  # c-use(a, b)
+    is_divisible = False
+    if (a % b == 0) or (b % a == 0):
+        is_divisible = True
+    
     total = 0  
 
     for i in range(1, 100):  
@@ -15,4 +18,4 @@ def process_numbers(a, b):
 
     if total > 50:  
         return is_divisible, total  
-    return is_divisible, None
+    return is_divisible
